@@ -1,3 +1,3 @@
 # Bejuslib
 
-A description of this package.
+swift helper classes and structs
