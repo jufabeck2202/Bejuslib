@@ -16,7 +16,7 @@ import Foundation
 import Foundation
 import SwiftUI
 
-extension Color {
+public extension Color {
     init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()
@@ -37,7 +37,7 @@ extension Color {
 }
 
 
-class HapticFeedback {
+public class HapticFeedback {
 
     public enum FeedbackStyle {
         case success
@@ -51,7 +51,7 @@ class HapticFeedback {
         case impactRigid
     }
     
-    static func play (_ type:FeedbackStyle){
+    public static func play (_ type:FeedbackStyle){
         switch type {
         case .success:
             let generator = UINotificationFeedbackGenerator()
