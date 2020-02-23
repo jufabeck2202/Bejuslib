@@ -57,14 +57,8 @@ public class HapticFeedback {
             let generator = UINotificationFeedbackGenerator()
                             generator.notificationOccurred(.success)
         case .selection:
-            #if os(watchOS)
-            //watchOS implementation
-                WKInterfaceDevice.current().play(.click)
-            
-            #else
             //iOS implementation
                 UISelectionFeedbackGenerator().selectionChanged()
-            #endif
         case .error:
             let generator = UINotificationFeedbackGenerator()
                        generator.notificationOccurred(.error)
