@@ -15,7 +15,7 @@ import Foundation
 
 import Foundation
 import SwiftUI
-
+#if os(iOS)
 public extension Color {
     init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
@@ -83,3 +83,4 @@ public class HapticFeedback {
         }
     }
 }
+#endif
